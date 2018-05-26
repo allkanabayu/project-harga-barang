@@ -9,7 +9,6 @@ env:
     - 'FTP_PASS=masbay103'
 
 script:
-  - "curl -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com -Q 'mkd public_html/uas'"
   - "curl -T edit-form.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/uas/"
   - "curl -T tambah.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/uas/"
   - "curl -T main.php -u $FTP_USER:$FTP_PASS ftp://files.000webhost.com/public_html/uas/"
